@@ -19,14 +19,21 @@
           {% if link_url != '' and link_url != '#' %}
             {% assign has_paper_link = true %}
           {% endif %}
+          {% assign pub_image_path = '/images/lab.jpg' %}
+          {% assign pub_image_alt = 'LIPS Lab research workspace' %}
+          {% assign pub_img_rel = publi.image | default: '' | strip %}
+          {% if pub_img_rel != '' %}
+            {% assign pub_image_path = '/images/' | append: pub_img_rel %}
+            {% assign pub_image_alt = publi.image_alt | default: 'Publication illustration' | strip %}
+          {% endif %}
           <article class="pub-card" role="listitem">
             <div class="pub-card__media">
               <img
                 class="pub-card__img"
-                src="{{ '/images/lab.jpg' | relative_url }}"
-                alt="LIPS Lab research workspace"
-                width="640"
-                height="400"
+                src="{{ pub_image_path | relative_url }}"
+                alt="{{ pub_image_alt }}"
+                width="960"
+                height="536"
                 loading="lazy"
                 decoding="async"
               />

@@ -1,7 +1,11 @@
 # Publications page lists only entries with highlight: 1. Set link.url to the paper (DOI, arXiv, publisher, etc.).
 # Optional authors: omit or use real author lines; "LIPS Lab Researchers" is hidden on the site.
-# Card images use the same lab photo as the home hero (/images/lab.jpg) unless the template is changed.
+# image: path under /images/ (e.g. publications/pub-01-....png). image_alt: short decorative description for the card art.
+# category: optional tags (opinion_policy | code_comprehension | llm_education | data_corpus). Card art is driven by image + image_alt.
 - title: "Are LLMs actually good for learning?"
+  category: opinion_policy
+  image: publications/pub-01-llms-good-learning.png
+  image_alt: "Illustration suggesting productive learning effort versus quick AI answers"
   description: "When are LLMs bad for learning? In our view, LLMs are bad for learning when they eliminate productive struggle. Unrestricted access to LLMs is fundamentally at odds with effective learning because they do too much for the learner."
   link:
     url: "https://link.springer.com/article/10.1007/s00146-025-02323-9"
@@ -9,6 +13,9 @@
   highlight: 1
 
 - title: "Automated Assessment of Student Self-Explanation in Code Comprehension Using Pre-Trained Language Models"
+  category: code_comprehension
+  image: publications/pub-02-assess-self-explain-code.png
+  image_alt: "Illustration of language models assessing student explanations of code"
   description: Using pre-trained language models to automatically assess how well students explain code, providing insights into their understanding.
   link:
     url: "https://ojs.aaai.org/index.php/AAAI/article/view/35169"
@@ -16,6 +23,9 @@
   highlight: 1
 
 - title: "Can LLMs Identify Gaps and Misconceptions in Students' Code Explanations?"
+  category: code_comprehension
+  image: publications/pub-03-gaps-misconceptions.png
+  image_alt: "Illustration of spotting missing ideas and misconceptions in explanations"
   description: Investigating the capability of large language models to detect gaps and misconceptions in student explanations of code.
   link:
     url: "https://arxiv.org/abs/2501.10365"
@@ -23,6 +33,9 @@
   highlight: 1
 
 - title: "A Study of LLM Generated Line-by-Line Explanations in the Context of Conversational Program Comprehension Tutoring Systems"
+  category: code_comprehension
+  image: publications/pub-04-line-by-line-tutoring.png
+  image_alt: "Illustration of line-by-line code explanation in a tutoring dialogue"
   description: Examining how LLMs can generate detailed line-by-line code explanations for conversational tutoring applications.
   link:
     url: "https://link.springer.com/chapter/10.1007/978-3-031-72315-5_5"
@@ -30,6 +43,9 @@
   highlight: 1
 
 - title: "Large language models and their implications for conversational tutors and GIFT"
+  category: llm_education
+  image: publications/pub-05-llm-gift-tutoring.png
+  image_alt: "Illustration of adaptive tutoring paths and intelligent tutoring systems"
   description: Exploring the impact and applications of large language models in the context of intelligent tutoring systems.
   link:
     url: "https://gifttutoring.org/documents/172"
@@ -37,6 +53,9 @@
   highlight: 1
 
 - title: "Automated essay scoring using discourse external knowledge"
+  category: llm_education
+  image: publications/pub-06-essay-discourse.png
+  image_alt: "Illustration of essay structure, discourse, and scoring"
   description: Developing methods for automated essay scoring that leverage external discourse knowledge.
   link:
     url: "https://www.ijcai.org/proceedings/2024/0791.pdf"
@@ -44,6 +63,9 @@
   highlight: 1
 
 - title: "Identifying gaps in students' explanations of code using llms"
+  category: code_comprehension
+  image: publications/pub-07-identify-gaps-code.png
+  image_alt: "Illustration of analyzing incomplete student code explanations"
   description: Using large language models to identify and analyze gaps in student code explanations.
   link:
     url: "https://digitalcommons.memphis.edu/facpubs/19973"
@@ -51,6 +73,9 @@
   highlight: 1
 
 - title: "Exploring the effectiveness of reading vs. tutoring for enhancing code comprehension for novices"
+  category: code_comprehension
+  image: publications/pub-08-reading-vs-tutoring.png
+  image_alt: "Illustration comparing reading worked examples with interactive tutoring"
   description: A comparative study of reading materials versus interactive tutoring for improving novice programmers' code comprehension.
   link:
     url: "https://digitalcommons.memphis.edu/facpubs/20148"
@@ -58,6 +83,9 @@
   highlight: 1
 
 - title: "Automated Assessment of Students' Code Comprehension using LLMs"
+  category: code_comprehension
+  image: publications/pub-09-assess-code-llm.png
+  image_alt: "Illustration of automated checks on student code understanding"
   description: Leveraging large language models for automated assessment of student understanding of code.
   link:
     url: "https://arxiv.org/abs/2401.05399"
@@ -65,6 +93,9 @@
   highlight: 1
 
 - title: "Explaining code examples in introductory programming courses: Llm vs humans"
+  category: code_comprehension
+  image: publications/pub-10-llm-vs-human-explain.png
+  image_alt: "Illustration contrasting model-generated and human-written explanations"
   description: Comparing the quality of code explanations generated by large language models versus human instructors.
   link:
     url: "https://arxiv.org/abs/2403.05538"
@@ -72,6 +103,9 @@
   highlight: 1
 
 - title: "The behavior of large language models when prompted to generate code explanations"
+  category: code_comprehension
+  image: publications/pub-11-llm-behavior-prompts.png
+  image_alt: "Illustration of prompts and settings shaping generated explanations"
   description: Analyzing how large language models respond to prompts for generating code explanations.
   link:
     url: "https://arxiv.org/abs/2311.01490"
@@ -79,6 +113,9 @@
   highlight: 1
 
 - title: "SelfCode 2.0: An annotated corpus of student and expert line-by-line explanations of code examples for automated assessment"
+  category: data_corpus
+  image: publications/pub-12-selfcode-corpus.png
+  image_alt: "Illustration of a labeled dataset of paired explanations"
   description: "Introduces SelfCode 2.0, a corpus of 3,019 student-expert explanation pairs for Java snippets, with expert labels for semantic similarity, correctness, and completeness to train models that assess learners' self-explanations. Includes baseline results using TF-IDF and Sentence-BERT toward stronger automated assessment in programming education."
   link:
     url: "https://par.nsf.gov/biblio/10613654"
