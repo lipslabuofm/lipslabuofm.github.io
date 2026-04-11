@@ -10,6 +10,15 @@
     <div class="pub-page__grid" role="list">
       {% for publi in site.data.publist %}
         {% if publi.highlight == 1 %}
+          {% assign link_url = publi.link.url | default: '' | strip %}
+          {% assign link_label = publi.link.display | default: 'Paper' | strip %}
+          {% if link_label == '' or link_label == 'Publication Link' %}
+            {% assign link_label = 'Paper' %}
+          {% endif %}
+          {% assign has_paper_link = false %}
+          {% if link_url != '' and link_url != '#' %}
+            {% assign has_paper_link = true %}
+          {% endif %}
           <article class="pub-card" role="listitem">
             <div class="pub-card__media">
               <img
@@ -23,23 +32,22 @@
               />
             </div>
             <div class="pub-card__body">
-              <h3 class="pub-card__title">{{ publi.title }}</h3>
+              <h3 class="pub-card__title">
+                {% if has_paper_link %}
+                  <a class="pub-card__title-link" href="{{ link_url }}" target="_blank" rel="noopener noreferrer">{{ publi.title }}</a>
+                {% else %}
+                  {{ publi.title }}
+                {% endif %}
+              </h3>
               <p class="pub-card__desc">{{ publi.description }}</p>
               {% assign au = publi.authors | default: '' | strip %}
               {% assign au_low = au | downcase %}
               {% if au != '' and au_low != 'lips lab researchers' %}
                 <p class="pub-card__authors">{{ publi.authors }}</p>
               {% endif %}
-              {% assign link_url = publi.link.url | strip %}
-              {% assign link_label = publi.link.display | default: 'Paper' | strip %}
-              {% if link_label == '' or link_label == 'Publication Link' %}
-                {% assign link_label = 'Paper' %}
-              {% endif %}
               <p class="pub-card__paper">
-                {% if link_url != '' and link_url != '#' %}
+                {% if has_paper_link %}
                   <a class="pub-card__paper-link" href="{{ link_url }}" target="_blank" rel="noopener noreferrer">{{ link_label }}</a>
-                {% else %}
-                  <!-- <span class="pub-card__paper-soon">Paper link coming soon</span> -->
                 {% endif %}
               </p>
               {% if publi.news1 != nil and publi.news1 != '' %}

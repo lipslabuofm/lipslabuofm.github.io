@@ -1088,6 +1088,17 @@ body.site-body {
   color: var(--lips-text);
 }
 
+#gridid .pub-card__title-link {
+  color: inherit;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--lips-accent);
+  }
+}
+
 #gridid .pub-card__desc {
   margin: 0 0 0.85rem;
   font-size: clamp(0.94rem, 1.35vw, 1.02rem);
