@@ -2,7 +2,7 @@
 # Tags on cards: director (pi) only. Dock row: website, Scholar, LinkedIn (empty or omit = muted slot).
 - name: Vasile Rus
   category: pi
-  photo: bio-photo.jpg
+  photo: vasile.jpeg
   role: Director, LIPS Lab — Jack and Jane Morris Professor
   bio: Leads research in NLP, intelligent tutoring systems, and AI for education.
   tags:
@@ -20,11 +20,11 @@
 
 - name: Shanti Tamang
   category: phd
-  photo: bio-photo.jpg
+  photo: Shanti.jpg
   role: PhD Student
-  email: stamang@memphis.edu
-  linkedin: ""
-  scholar: ""
+  email: 
+  linkedin: "https://www.linkedin.com/in/shanti-tamang-1b1477152/"
+  scholar: "https://scholar.google.com/citations?user=3hAPs74AAAAJ&hl=en"
   website: ""
   number_educ: 0
   education1:
@@ -33,11 +33,11 @@
 
 - name: Mahumudul Sajib Islam
   category: phd
-  photo: bio-photo.jpg
+  photo: Mahumudul.jpeg
   role: PhD Student
-  email: mislam@memphis.edu
-  linkedin: ""
-  scholar: ""
+  email: 
+  linkedin: "https://www.linkedin.com/in/mahmudul-sajib/"
+  scholar: "https://scholar.google.com/citations?user=Q9vNfd0AAAAJ&hl=en&oi=ao"
   website: ""
   number_educ: 0
   education1:
@@ -46,11 +46,11 @@
 
 - name: Md Abdul Mazid Adnan
   category: phd
-  photo: bio-photo.jpg
+  photo: Adnan.jpeg
   role: PhD Student
-  email: madnan@memphis.edu
-  linkedin: ""
-  scholar: ""
+  email: 
+  linkedin: "https://www.linkedin.com/in/md-abdul-mazid-adnan/"
+  scholar: "https://scholar.google.com/citations?user=1ieimToAAAAJ&hl=en&oi=ao"
   website: ""
   number_educ: 0
   education1:
@@ -61,9 +61,9 @@
   category: phd
   photo: bio-photo.jpg
   role: PhD Student
-  email: ywu@memphis.edu
-  linkedin: ""
-  scholar: ""
+  email: 
+  linkedin: "https://www.linkedin.com/in/yuexin-wu-2989231b6/"
+  scholar: "https://scholar.google.com/citations?user=zMT1MgUAAAAJ&hl=en&oi=ao"
   website: ""
   number_educ: 0
   education1:
@@ -72,7 +72,7 @@
 
 - name: Samudra Nepal
   category: phd
-  photo: bio-photo.jpg
+  photo: Samudra.jpg
   role: PhD Student
   email:
   linkedin: ""

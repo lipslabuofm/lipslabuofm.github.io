@@ -1,5 +1,5 @@
 - name: Jeevan Chapagain
-  photo: bio-photo.jpg
+  photo: jeevan.jpg
   info: PhD Student
   email:
   linkedin: "https://www.linkedin.com/in/jeevanchaps/"
@@ -7,7 +7,7 @@
   website: "https://jeevanchaps.github.io/"
 
 - name: Priti Oli
-  photo: bio-photo.jpg
+  photo: priti.jpg
   duration: 2018 - 2020
   info: PhD Student
   email: 
@@ -16,7 +16,7 @@
   website: "https://pritioli.github.io/cv/"
 
 - name: Rabin Banjade
-  photo: bio-photo.jpg
+  photo: rabin.jpeg
   info: PhD Student
   duration: 2019 - 2021
   email: 
@@ -25,7 +25,7 @@
   website: "#"
 
 - name: Lasang Jimba Tamang
-  photo: bio-photo.jpg
+  photo: lasang.jpg
   info: PhD Student
   duration: 2017 - 2022
   email: 
@@ -34,7 +34,7 @@
   website: "#"
 
 - name: Nisrine Ait Khayi
-  photo: bio-photo.jpg
+  photo: nisrine.jpg
   info: PhD Student
   duration: 2020 - 2021
   email:
@@ -43,7 +43,7 @@
   website: "#"
 
 - name: Zeyad Alshaikh
-  photo: bio-photo.jpg
+  photo: zeyad.png
   info: PhD Student
   duration: 2016 - 2021
   email: 
@@ -52,7 +52,7 @@
   website: "#"
 
 - name: Nabin Maharjan
-  photo: bio-photo.jpg
+  photo: nabin.jpeg
   info: PhD Student
   duration: 2021 - 2023
   email: 
@@ -61,7 +61,7 @@
   website: "#"
 
 - name: Dipesh Gautam
-  photo: bio-photo.jpg
+  photo: dipesh.jpeg
   info: PhD Student
   duration: 2019 - 2024
   email: 
@@ -70,7 +70,7 @@
   website: "#"
 
 - name: Rajendra Banjade
-  photo: bio-photo.jpg
+  photo: rajendra.jpg
   info: PhD Student
   duration: 2022 - 2023
   email: 
@@ -79,7 +79,7 @@
   website: "#"
 
 - name: Nobal B Niraula
-  photo: bio-photo.jpg
+  photo: nobal.jpeg
   info: PhD Student
   duration: 2015 - 2020
   email: 
@@ -88,7 +88,7 @@
   website: "#"
 
 - name: Archana Bhattarai
-  photo: bio-photo.jpg
+  photo: archana.jpeg
   info: PhD Student
   duration: 2020 - 2022
   email: 
@@ -97,7 +97,7 @@
   website: "#"
 
 - name: Dan Stefanescu
-  photo: bio-photo.jpg
+  photo: Dan-Stefanescu.webp
   info: Postdoctoral Researcher
   duration: 
   email: 
