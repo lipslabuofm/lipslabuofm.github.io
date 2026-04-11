@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="hero--home" aria-labelledby="hero-heading">
+  <div
+    class="hero__media"
+    style="background-image: url('{{ '/images/lab.jpg' | relative_url }}');"
+    role="img"
+    aria-label="LIPS Lab research workspace"
+  ></div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <h1 id="hero-heading" class="hero__title">Welcome to Language and Information Processing (LIPS) Lab</h1>
+    <p class="hero__lead">
+      We advance the full cycle of language processing from text and meaning to generation through research in assessment, semantics, tutoring systems, and beyond.
+    </p>
+    <div class="hero__actions">
+      <a class="hero__btn hero__btn--primary" href="{{ '/team/' | relative_url }}">Our team</a>
+      <a class="hero__btn hero__btn--ghost" href="{{ '/publications/' | relative_url }}">View publications →</a>
+    </div>
+  </div>
+</section>
+
+<div id="homeid" class="col-sm-12 home-content">
+  {{ content }}
+</div>

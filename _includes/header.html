@@ -1,0 +1,37 @@
+<header class="site-header" role="banner">
+  <div class="site-header__bar">
+    <a class="site-header__logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <button
+      type="button"
+      class="site-header__toggle collapsed"
+      data-toggle="collapse"
+      data-target="#site-menu"
+      aria-controls="site-menu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-menu" class="site-header__nav navbar-collapse collapse" role="navigation" aria-label="Main">
+      <ul class="site-nav-list">
+        <li class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">
+          <a href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        <li class="{% if page.url == '/team/' %}active{% endif %}">
+          <a href="{{ '/team/' | relative_url }}">Team</a>
+        </li>
+        <li class="{% if page.url == '/research/' %}active{% endif %}">
+          <a href="{{ '/research/' | relative_url }}">Research</a>
+        </li>
+        <li class="{% if page.url == '/publications/' %}active{% endif %}">
+          <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        </li>
+        <li class="{% if page.url == '/contact/' %}active{% endif %}">
+          <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

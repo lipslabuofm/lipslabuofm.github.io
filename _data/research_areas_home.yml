@@ -1,0 +1,49 @@
+# Home page “Research focus areas” cards (6 items → 3×2 CSS grid)
+- title: Assessment of Free Responses
+  description: Automated evaluation and natural-language feedback for open-ended student responses, grounded in semantics and educational NLP.
+  emoji: "✍️"
+  gradient: g1
+  tags:
+    - NLP
+    - Education
+    - Assessment
+
+- title: Domain Modeling
+  description: Structured representations of knowledge domains and concepts to power reasoning, retrieval, and instructional systems.
+  emoji: "🧩"
+  gradient: g2
+  tags:
+    - Knowledge graphs
+    - Semantics
+
+- title: Automated Authoring of Code Explanations
+  description: Generating clear natural language explanations of program behavior to support computing education and developer tools.
+  emoji: "💻"
+  gradient: g3
+  tags:
+    - Code NL
+    - Generation
+
+- title: Semantic Similarity
+  description: Measuring and analyzing meaning relationships between texts for search, clustering, and downstream language applications.
+  emoji: "🎯"
+  gradient: g4
+  tags:
+    - Embeddings
+    - IR
+
+- title: Question Answering
+  description: Building systems that interpret questions and produce answers by combining retrieval, inference, and language understanding.
+  emoji: "❓"
+  gradient: g5
+  tags:
+    - QA
+    - Retrieval
+
+- title: Intelligent Tutoring Systems
+  description: AI-powered tutoring that adapts to learners through dialogue, assessment, and personalized feedback at scale.
+  emoji: "🎓"
+  gradient: g6
+  tags:
+    - ITS
+    - Learning

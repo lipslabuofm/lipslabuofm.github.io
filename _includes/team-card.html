@@ -1,0 +1,69 @@
+{% assign m = include.member %}
+{% assign is_alumni = include.alumni %}
+{%- assign web_raw = m.website | default: '' | strip -%}
+{%- assign sch_raw = m.scholar | default: '' | strip -%}
+{%- assign web_ok = false -%}
+{%- if web_raw != '' and web_raw != '#' -%}{%- assign web_ok = true -%}{%- endif -%}
+{%- assign sch_ok = false -%}
+{%- if sch_raw != '' and sch_raw != '#' -%}{%- assign sch_ok = true -%}{%- endif -%}
+{%- assign li_raw = m.linkedin | default: '' | strip -%}
+{%- assign li_ok = false -%}
+{%- if li_raw != '' and li_raw != '#' -%}{%- assign li_ok = true -%}{%- endif -%}
+<article class="team-card{% if is_alumni %} team-card--alumni{% endif %}">
+  <div class="team-card__media">
+    <img
+      class="team-card__img"
+      src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ m.photo }}"
+      alt="{{ m.name | escape }}"
+      width="480"
+      height="360"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <div class="team-card__body">
+    <h3 class="team-card__name">{{ m.name }}</h3>
+    {%- assign r = m.role | default: m.info -%}
+    <p class="team-card__role">{{ r | strip | replace: '<br />', '%%BR%%' | replace: '<br>', '%%BR%%' | split: '%%BR%%' | join: ' · ' | strip }}</p>
+    {% if m.bio %}
+      {% unless m.category == 'phd' %}
+        <p class="team-card__bio">{{ m.bio }}</p>
+      {% endunless %}
+    {% endif %}
+    {% unless is_alumni %}
+      {% if m.category == 'pi' and m.tags and m.tags.size > 0 %}
+        <ul class="team-card__tags" aria-label="Research areas">
+          {% for tag in m.tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endunless %}
+
+    <div class="team-card__social-dock" role="group" aria-label="Profile links">
+      {% if web_ok %}
+        <a class="team-card__dock-item team-card__dock-item--link" href="{{ web_raw }}" target="_blank" rel="noopener noreferrer" title="Website">
+      {% else %}
+        <span class="team-card__dock-item team-card__dock-item--inactive" title="Website not listed">
+      {% endif %}
+          <svg class="team-card__dock-svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      {% if web_ok %}</a>{% else %}</span>{% endif %}
+
+      {% if sch_ok %}
+        <a class="team-card__dock-item team-card__dock-item--link" href="{{ sch_raw }}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+      {% else %}
+        <span class="team-card__dock-item team-card__dock-item--inactive" title="Google Scholar not listed">
+      {% endif %}
+          <svg class="team-card__dock-svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+      {% if sch_ok %}</a>{% else %}</span>{% endif %}
+
+      {% if li_ok %}
+        <a class="team-card__dock-item team-card__dock-item--link" href="{{ li_raw }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+      {% else %}
+        <span class="team-card__dock-item team-card__dock-item--inactive" title="LinkedIn not listed">
+      {% endif %}
+          <svg class="team-card__dock-svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      {% if li_ok %}</a>{% else %}</span>{% endif %}
+    </div>
+  </div>
+</article>

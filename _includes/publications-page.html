@@ -1,0 +1,57 @@
+<div class="pub-page-root" markdown="0">
+  <div class="pub-page">
+    <header class="pub-page__hero">
+      <h1 class="pub-page__title" id="publications-heading">Publications</h1>
+      <p class="pub-page__lede">
+        Selected papers and projects representing recent directions in the lab’s research.
+      </p>
+    </header>
+
+    <div class="pub-page__grid" role="list">
+      {% for publi in site.data.publist %}
+        {% if publi.highlight == 1 %}
+          <article class="pub-card" role="listitem">
+            <div class="pub-card__media">
+              <img
+                class="pub-card__img"
+                src="{{ '/images/lab.jpg' | relative_url }}"
+                alt="LIPS Lab research workspace"
+                width="640"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="pub-card__body">
+              <h3 class="pub-card__title">{{ publi.title }}</h3>
+              <p class="pub-card__desc">{{ publi.description }}</p>
+              {% assign au = publi.authors | default: '' | strip %}
+              {% assign au_low = au | downcase %}
+              {% if au != '' and au_low != 'lips lab researchers' %}
+                <p class="pub-card__authors">{{ publi.authors }}</p>
+              {% endif %}
+              {% assign link_url = publi.link.url | strip %}
+              {% assign link_label = publi.link.display | default: 'Paper' | strip %}
+              {% if link_label == '' or link_label == 'Publication Link' %}
+                {% assign link_label = 'Paper' %}
+              {% endif %}
+              <p class="pub-card__paper">
+                {% if link_url != '' and link_url != '#' %}
+                  <a class="pub-card__paper-link" href="{{ link_url }}" target="_blank" rel="noopener noreferrer">{{ link_label }}</a>
+                {% else %}
+                  <span class="pub-card__paper-soon">Paper link coming soon</span>
+                {% endif %}
+              </p>
+              {% if publi.news1 != nil and publi.news1 != '' %}
+                <p class="pub-card__note pub-card__note--emph">{{ publi.news1 }}</p>
+              {% endif %}
+              {% if publi.news2 != nil and publi.news2 != '' %}
+                <p class="pub-card__note">{{ publi.news2 }}</p>
+              {% endif %}
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

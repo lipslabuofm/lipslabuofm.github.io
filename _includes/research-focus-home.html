@@ -1,0 +1,32 @@
+<div class="research-focus__wrap">
+  <header class="research-focus__header">
+    <h2 class="research-focus__title">Research focus areas</h2>
+    <p class="research-focus__kicker">Pushing the boundaries of language technology</p>
+    <!-- <p class="research-focus__intro">
+      We work across the full cycle of language processing—from surface form to deep meaning and back to generation—building systems for education, retrieval, and intelligent interaction.
+    </p> -->
+  </header>
+
+  <div class="research-focus__grid">
+    {% for area in site.data.research_areas_home %}
+    <article class="research-focus-card research-focus-card--{{ area.gradient }}">
+      <div class="research-focus-card__hero">
+        <span class="research-focus-card__emoji" aria-hidden="true">{{ area.emoji }}</span>
+      </div>
+      <div class="research-focus-card__body">
+        <h3 class="research-focus-card__heading">{{ area.title }}</h3>
+        <p class="research-focus-card__desc">{{ area.description }}</p>
+        <div class="research-focus-card__tags">
+          {% for tag in area.tags %}
+          <span class="research-focus-card__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="research-focus__footer">
+    <a class="research-focus__cta" href="{{ '/research/' | relative_url }}">Research projects →</a>
+  </div>
+</div>

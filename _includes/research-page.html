@@ -1,0 +1,25 @@
+<div class="research-page-root" markdown="0">
+  <div class="research-page">
+    <header class="research-page__hero">
+      <h1 class="research-page__title" id="research-projects-heading">Research Projects</h1>
+      <p class="research-page__lede">
+        We have a wide range of research interests across language technologies, learning sciences, and AI for education.
+      </p>
+    </header>
+
+    <section class="research-page__section research-page__section--projects" aria-labelledby="research-projects-heading">
+      <div class="research-page__grid research-page__grid--projects">
+        {% for project in site.data.research_projects %}
+          {% assign gi = forloop.index0 | modulo: 6 | plus: 1 %}
+          <article class="rp-card rp-card--g{{ gi }} rp-card--project">
+            <div class="rp-card__media rp-card__media--abstract" aria-hidden="true"></div>
+            <div class="rp-card__body">
+              <h3 class="rp-card__title">{{ project.title }}</h3>
+              <div class="rp-card__desc rp-card__desc--rich">{{ project.description | markdownify }}</div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>

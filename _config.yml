@@ -1,0 +1,48 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Language and Information Processing (LIPS) Lab
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Website of the Language and Information Processing (LIPS) Lab.
+baseurl: ""
+url: "https://lipslabuofm.github.io"
+
+include:
+  - .htaccess
+  - _pages
+
+sass:
+  sass_dir: _sass
+  # Dart Sass warns on legacy Bootstrap 3 SCSS; CSS output is unchanged.
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
+    - slash-div
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true # default for kramdown is false. This will enable using Markdown links
