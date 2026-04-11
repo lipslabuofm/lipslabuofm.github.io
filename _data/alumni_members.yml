@@ -11,17 +11,17 @@
   duration: 2018 - 2020
   info: PhD Student
   email: 
-  linkedin: "#"
-  scholar: "#"
-  website: "#"
+  linkedin: "https://www.linkedin.com/in/priti-oli-a58661b2/"
+  scholar: "https://scholar.google.com/citations?user=HEMgu08AAAAJ&hl=en"
+  website: "https://pritioli.github.io/cv/"
 
 - name: Rabin Banjade
   photo: bio-photo.jpg
   info: PhD Student
   duration: 2019 - 2021
   email: 
-  linkedin: "#"
-  scholar: "#"
+  linkedin: "https://www.linkedin.com/in/rabin-banjade-0a4371b0/"
+  scholar: "https://scholar.google.com/citations?user=9kyXcR8AAAAJ&hl=en"
   website: "#"
 
 - name: Lasang Jimba Tamang
@@ -29,8 +29,8 @@
   info: PhD Student
   duration: 2017 - 2022
   email: 
-  linkedin: "#"
-  scholar: "#"
+  linkedin: "https://www.linkedin.com/in/lasang/"
+  scholar: "https://scholar.google.com/citations?user=RkHpFekAAAAJ&hl=en&oi=ao"
   website: "#"
 
 - name: Nisrine Ait Khayi
@@ -38,8 +38,8 @@
   info: PhD Student
   duration: 2020 - 2021
   email:
-  linkedin: "#"
-  scholar: "#"
+  linkedin: "https://www.linkedin.com/in/nisrine-ait-khayi-ph-d-7b703526a/"
+  scholar: "https://scholar.google.com/citations?user=qG0WCT4AAAAJ&hl=en&oi=ao"
   website: "#"
 
 - name: Zeyad Alshaikh
@@ -47,8 +47,8 @@
   info: PhD Student
   duration: 2016 - 2021
   email: 
-  linkedin: "#"
-  scholar: "#"
+  linkedin: "https://www.linkedin.com/in/zeyadalshaikh/"
+  scholar: "https://scholar.google.com/citations?user=j46pt9EAAAAJ&hl=en"
   website: "#"
 
 - name: Nabin Maharjan
@@ -56,17 +56,17 @@
   info: PhD Student
   duration: 2021 - 2023
   email: 
-  linkedin: "#"
-  scholar: "#"
+  linkedin: "https://www.linkedin.com/in/nabin-maharjan-5128535a/"
+  scholar: "https://scholar.google.com/citations?user=CHFfYmQAAAAJ&hl=en"
   website: "#"
 
 - name: Dipesh Gautam
   photo: bio-photo.jpg
   info: PhD Student
   duration: 2019 - 2024
-  email: jwilson@memphis.edu
-  linkedin: "#"
-  scholar: "#"
+  email: 
+  linkedin: "https://www.linkedin.com/in/dipesh-gautam-4492a371/"
+  scholar: "https://scholar.google.com/citations?user=QoxtyWkAAAAJ&hl=en"
   website: "#"
 
 - name: Rajendra Banjade
@@ -74,8 +74,8 @@
   info: PhD Student
   duration: 2022 - 2023
   email: 
-  linkedin: "#"
-  scholar: "#"
+  linkedin: "https://www.linkedin.com/in/rbanjade/"
+  scholar: "https://scholar.google.com/citations?user=IxQkawcAAAAJ&hl=en"
   website: "#"
 
 - name: Nobal B Niraula
@@ -83,8 +83,8 @@
   info: PhD Student
   duration: 2015 - 2020
   email: 
-  linkedin: "#"
-  scholar: "#"
+  linkedin: "https://www.linkedin.com/in/nobalniraula/"
+  scholar: "https://scholar.google.com/citations?user=dV1Rz6kAAAAJ&hl=en&oi=ao"
   website: "#"
 
 - name: Archana Bhattarai
@@ -92,6 +92,15 @@
   info: PhD Student
   duration: 2020 - 2022
   email: 
-  linkedin: "#"
+  linkedin: "https://www.linkedin.com/in/archana-bhattarai-16955498/"
   scholar: "#"
+  website: "#"
+
+- name: Dan Stefanescu
+  photo: bio-photo.jpg
+  info: Postdoctoral Researcher
+  duration: 
+  email: 
+  linkedin: "https://www.linkedin.com/in/dan-stefanescu/"
+  scholar: "https://scholar.google.com/citations?user=KLoHiTEAAAAJ&hl=en"
   website: "#"
