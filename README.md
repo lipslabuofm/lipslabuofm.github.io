@@ -191,6 +191,70 @@ After the build finishes (Actions or Pages build), the site updates at your `url
 
 In **Settings → Pages**, set the custom domain and add the DNS records GitHub requests. Put a `CNAME` file in the site root if you use a subdomain workflow described in GitHub’s docs.
 
+### 6. Workflow file in this repo
+
+The **GitHub Actions** workflow lives at **`.github/workflows/jekyll-gh-pages.yml`**. It runs on pushes to **`main`** or **`master`**. If you use another default branch, add it under `on.push.branches` or rename the branch so deploys actually run.
+
+---
+
+## Troubleshooting: plain HTML / no CSS on GitHub Pages
+
+If the site looks like a default browser page (bulleted nav, Times-like font, broken layout) **only on GitHub Pages** but **`jekyll serve` looks fine locally**, work through the items below.
+
+### 1. Wrong `url` / `baseurl` (broken asset paths)
+
+| Where the site actually loads | Repository type | `_config.yml` |
+|--------------------------------|-----------------|---------------|
+| `https://lipslabuofm.github.io/` (no extra path) | User/org site: repo name is exactly **`lipslabuofm.github.io`** | `url: "https://lipslabuofm.github.io"` and **`baseurl: ""`** |
+| `https://lipslabuofm.github.io/<repo-name>/` | Project site: any other repo name | `url: "https://lipslabuofm.github.io"` and **`baseurl: "/<repo-name>"`** (must match the repo name) |
+
+If `baseurl` does not match how GitHub serves the site, the HTML will request `/css/main.css` at the **wrong path** (404), so no styles load. Fix `_config.yml`, commit, push, and wait for Actions to finish.
+
+**Local preview with a project `baseurl`:** run `jekyll serve` and open `http://127.0.0.1:4000/<repo-name>/` (include the same path as `baseurl`).
+
+### 2. Live site is an old build (not the same as your laptop)
+
+GitHub Pages serves whatever the **last successful** Actions deploy built—not your uncommitted files.
+
+- Push all changes to the repo that powers the site (usually **`lipslabuofm/lipslabuofm.github.io`**).
+- **Actions** → latest **Deploy Jekyll site to Pages** → must be **green**.
+- **Settings → Pages → Source** should be **GitHub Actions** (not an old “Deploy from branch” you forgot about).
+
+You can edit files **on github.com** (pencil icon → commit) if you do not use Git locally; still wait for Actions after each commit.
+
+### 3. Google Fonts `@import` inside compiled `main.css` (strict browsers / networks)
+
+Older Bootswatch setups inject a CSS line like:
+
+`@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro...");`
+
+inside **`main.css`**. On some networks, privacy tools, or browsers, a failing **`@import`** can prevent the **rest of that stylesheet** from applying, so the whole site looks unstyled even though `main.css` returns HTTP 200.
+
+**In this repo**, those lines are removed from **`_sass/bootstrap/_bootswatch.scss`** (the site loads **Inter** from **`_includes/head.html`** instead). If you merged an older template or edited on GitHub, ensure **`_bootswatch.scss`** does **not** contain `$web-font-path` and **`@import url($web-font-path);`**.
+
+**Check what is actually deployed:**
+
+```bash
+curl -s https://lipslabuofm.github.io/css/main.css | head -c 400
+curl -s https://lipslabuofm.github.io/css/main.css | grep -E 'Source\+Sans|@import url\("https://fonts'
+```
+
+If the second command prints lines with **`Source+Sans`** or **`fonts.googleapis.com`** inside **`main.css`**, fix `_bootswatch.scss`, commit, push, and re-run Actions. After a good deploy, that `grep` should print **nothing** (or only unrelated matches).
+
+This repo may also include a build marker near the top of **`css/main.scss`** (e.g. a comment mentioning **`LIPS main.css v3`**) so you can tell a new deploy from cached output—if you do not see it in the first ~500 bytes of the live file, the new build may not be live yet.
+
+### 4. Browser cache and privacy tools
+
+After fixing the server:
+
+- Hard refresh (**Cmd+Shift+R** / **Ctrl+Shift+R**) or try a **private window**.
+- **Brave Shields** (or similar) can interfere with fonts or scripts; try lowering shields for `*.github.io` once to test.
+
+### 5. Still stuck?
+
+1. In DevTools → **Network**, reload the homepage and select **`main.css`**: confirm **status 200** and type **stylesheet**.
+2. Compare the default branch on GitHub with your machine: open **`_config.yml`** and **`_sass/bootstrap/_bootswatch.scss`** on github.com and confirm they match what you expect.
+
 ---
 
 ## YAML editing tips
