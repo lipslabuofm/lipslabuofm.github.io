@@ -12,7 +12,19 @@
         {% for project in site.data.research_projects %}
           {% assign gi = forloop.index0 | modulo: 6 | plus: 1 %}
           <article class="rp-card rp-card--g{{ gi }} rp-card--project">
-            <div class="rp-card__media rp-card__media--abstract" aria-hidden="true"></div>
+            <div class="rp-card__media rp-card__media--abstract{% if project.image %} rp-card__media--photo{% endif %}"{% unless project.image %} aria-hidden="true"{% endunless %}>
+              {% if project.image %}
+                <img
+                  class="rp-card__img"
+                  src="{{ '/images/' | append: project.image | relative_url }}"
+                  alt="{{ project.title | escape }}"
+                  width="900"
+                  height="502"
+                  loading="lazy"
+                  decoding="async"
+                />
+              {% endif %}
+            </div>
             <div class="rp-card__body">
               <h3 class="rp-card__title">{{ project.title }}</h3>
               <div class="rp-card__desc rp-card__desc--rich">{{ project.description | markdownify }}</div>

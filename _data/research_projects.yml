@@ -1,5 +1,7 @@
 # Funded research projects (Research page cards)
+# Optional image: path under /images/ (see _includes/research-page.html)
 - title: "iCODE: Adaptive Training of Students' Code Comprehension Processes"
+  image: research/research-icode-code-comprehension.png
   description: |
     *Institute for Education Sciences · Department of Education*
 
@@ -8,30 +10,35 @@
     Collaboration with University of Minnesota and University of North Carolina.
 
 - title: "Advancing the Science of Learning Data Science with Adaptive Learning for Future Workforce Development"
+  image: research/research-adaptive-data-science-workforce.png
   description: |
     **Period:** 2020–2025 · **Amount:** $3,439,035
 
     [NSF award 1918751](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1918751&HistoricalAwards=false)
 
 - title: "Investigating techniques that couple Markov Logic and Deep Learning with applications to discovering strategies to improve STEM learning"
+  image: research/research-markov-logic-deep-learning-stem.png
   description: |
     **Period:** 2020–2023 · **Amount:** $413,482
 
     [NSF award 2008812](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2008812&HistoricalAwards=false)
 
 - title: "The Learner Data Institute: Harnessing The Data Revolution To Make The Learning Ecosystem More Effective, Efficient, and Engaging"
+  image: research/research-learner-data-institute.png
   description: |
     **Period:** 2019–2023 (Phase 2: 15 million for 5 years – to be applied for) · **Currently funded amount:** $2,584,309
 
     [NSF award 1934745](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1934745&HistoricalAwards=false)
 
 - title: "Collaborative Research: CSEdPad: Investigating and Scaffolding Students' Mental Models during Computer Programming Tasks to Improve Learning, Engagement, and Retention"
+  image: research/research-csedpad-mental-models.png
   description: |
     **Period:** 2018–2023 · **Amount:** $749,136 (collaborative project with Peter Brusilovsky at the University of Pittsburgh; Pittsburgh portion ~$250k)
 
     [NSF award 1822816](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1822816&HistoricalAwards=false)
 
 - title: "Generalized Intelligent Framework for Tutors (GIFT) Expert Series"
+  image: research/research-gift-intelligent-tutoring.png
   description: |
     *Funded by Army Research Lab · Department of Defense*
 
