@@ -2,6 +2,27 @@
 # Optional authors: omit or use real author lines; "LIPS Lab Researchers" is hidden on the site.
 # image: path under /images/ (e.g. publications/pub-01-....png). image_alt: short decorative description for the card art.
 # category: optional tags (opinion_policy | code_comprehension | llm_education | data_corpus). Card art is driven by image + image_alt.
+- title: "Enhancing Intelligent Tutoring Systems with Instruction-Tuned LLMs: Automated Assessment of Student Code Comprehension"
+  category: code_comprehension
+  image: publications/pub-13-instruction-tuned-llm-assessment.png
+  image_alt: "Illustration of assessing student code explanations with an LLM"
+  description: "Evaluating students’ natural-language explanations of code is challenging for real-time tutoring feedback. This paper fine-tunes open-source LLMs to automatically assess line-by-line Java code explanations, achieving strong correlations with human judgments and outperforming few-shot prompting baselines."
+  highlight: 1
+
+- title: "Evaluating Logical Structure in Computer Programs Using LLMs"
+  category: code_comprehension
+  image: publications/pub-14-logical-steps-structure.png
+  image_alt: "Illustration of mapping program logic steps to code blocks"
+  description: "This work examines how well LLMs can identify and explain a program’s logical steps and corresponding code blocks in well-structured tasks. Similarity between LLM and expert annotations reaches up to 64.4% under multiple alignment strategies."
+  highlight: 1
+
+- title: "A Study on How Well LLMs Can Assist Novices with Code Comprehension Tasks"
+  category: code_comprehension
+  image: publications/pub-15-novice-llm-code-comprehension.png
+  image_alt: "Illustration of a novice student using an LLM for code comprehension"
+  description: "We study how intro-to-programming students prompt LLMs for help with code comprehension without training on advanced prompting. LLM explanations are generally accurate and complete; students use three main prompt types, and LLM access is associated with increased confidence and improved performance."
+  highlight: 1
+
 - title: "Are LLMs actually good for learning?"
   category: opinion_policy
   image: publications/pub-01-llms-good-learning.png
