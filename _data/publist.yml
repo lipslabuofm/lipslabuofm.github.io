@@ -7,6 +7,9 @@
   image: publications/pub-13-instruction-tuned-llm-assessment.png
   image_alt: "Illustration of assessing student code explanations with an LLM"
   description: "Evaluating students’ natural-language explanations of code is challenging for real-time tutoring feedback. This paper fine-tunes open-source LLMs to automatically assess line-by-line Java code explanations, achieving strong correlations with human judgments and outperforming few-shot prompting baselines."
+  link:
+    url: "https://dl.acm.org/doi/10.1007/978-3-032-29744-0_3"
+    display: Paper
   highlight: 1
 
 - title: "Evaluating Logical Structure in Computer Programs Using LLMs"
