@@ -14,13 +14,19 @@
   image: publications/pub-14-logical-steps-structure.png
   image_alt: "Illustration of mapping program logic steps to code blocks"
   description: "This work examines how well LLMs can identify and explain a program’s logical steps and corresponding code blocks in well-structured tasks. Similarity between LLM and expert annotations reaches up to 64.4% under multiple alignment strategies."
+  link:
+    url: "https://journals.flvc.org/FLAIRS/article/view/141793"
+    display: Paper
   highlight: 1
 
-- title: "A Study on How Well LLMs Can Assist Novices with Code Comprehension Tasks"
+- title: "A Study on How Free Use of LLMs Assists Novices with Code Comprehension Tasks"
   category: code_comprehension
   image: publications/pub-15-novice-llm-code-comprehension.png
   image_alt: "Illustration of a novice student using an LLM for code comprehension"
   description: "We study how intro-to-programming students prompt LLMs for help with code comprehension without training on advanced prompting. LLM explanations are generally accurate and complete; students use three main prompt types, and LLM access is associated with increased confidence and improved performance."
+  link:
+    url: "https://journals.flvc.org/FLAIRS/article/view/141647"
+    display: Paper
   highlight: 1
 
 - title: "Are LLMs actually good for learning?"
